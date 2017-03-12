@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="img">
-      <img :src="detail.images.large" alt="">
+      <img :src="detail.images.large">
     </div>
   </div>
 </template>
@@ -38,6 +38,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang='scss'>
   .img {
-    
+
   }
 </style>
