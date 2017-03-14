@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="img">
-      <img :src="detail.images.large">
+      <img :src="detail.images ? detail.images.large: ''">
     </div>
   </div>
 </template>

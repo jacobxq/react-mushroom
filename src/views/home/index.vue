@@ -10,11 +10,28 @@ export default {
   name: 'hello',
   data () {
     return {
-      foo: true,
+      citys: '',
       msg: 'Welcome to Your Vue.js App'
     }
   },
   mounted () {
+    // var that = this
+    this.axios({
+      method: 'get',
+      url: 'mayi/location/allCitys',
+      params: {
+        storeID: '7'
+      }
+    })
+    .then(function (res) {
+      console.log(res)
+      // that.movieData = res.data
+      // that.silideData = res.data.subjects.slice(0, 6)
+      // that.loading = false
+    })
+    .catch(function (response) {
+      console.log(response)
+    })
   }
 }
 </script>
