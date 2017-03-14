@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import home from '@/components/home/index'
-import movieIndex from '@/components/movie/index'
-import movieDetail from '@/components/movie/movieDetail'
-import weatherIndex from '@/components/weather/index'
-import musicIndex from '@/components/music/index'
+import home from '@/views/home/index'
+import movieIndex from '@/views/movie/index'
+import movieDetail from '@/views/movie/movieDetail'
+import weatherIndex from '@/views/weather/index'
+import musicIndex from '@/views/music/index'
 
 Vue.use(Router)
 
