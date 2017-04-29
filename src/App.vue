@@ -53,11 +53,11 @@ export default {
 <style lang="scss">
 @font-face {
   font-family: 'iconfont';  /* project id 250625 */
-  src: url('//at.alicdn.com/t/font_rtinmbw02f7jh5mi.eot');
-  src: url('//at.alicdn.com/t/font_rtinmbw02f7jh5mi.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_rtinmbw02f7jh5mi.woff') format('woff'),
-  url('//at.alicdn.com/t/font_rtinmbw02f7jh5mi.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_rtinmbw02f7jh5mi.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_9fbkyl0irtua0pb9.eot');
+  src: url('//at.alicdn.com/t/font_9fbkyl0irtua0pb9.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_9fbkyl0irtua0pb9.woff') format('woff'),
+  url('//at.alicdn.com/t/font_9fbkyl0irtua0pb9.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_9fbkyl0irtua0pb9.svg#iconfont') format('svg');
 }
 .iconfont {
   font-family:"iconfont" !important;

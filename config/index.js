@@ -35,8 +35,15 @@ module.exports = {
           '^/v2': ''
         }
       },
+      // '/v3': {
+      //   target: 'https://api.map.baidu.com/telematics/v3/',
+      //   changeOrigin: true,
+      //   pathRewrite: {
+      //     '^/v3': ''
+      //   }
+      // },
       '/v3': {
-        target: 'https://api.map.baidu.com/telematics/v3/',
+        target: 'https://api.thinkpage.cn/v3/',
         changeOrigin: true,
         pathRewrite: {
           '^/v3': ''

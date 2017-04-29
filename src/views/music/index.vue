@@ -2,7 +2,7 @@
 	<div>
     <p><a href="http://www.zcool.com.cn/work/ZMjA3NDAzMjg=.html" target='_blank'>设计</a></p>
 		<p class="three">{{ msg }}</p>
-		<audio :src="songUrl" autoplay></audio>
+		<audio :src="songUrl" autoplay controls id="audio"></audio>
 	</div>
 </template>
 
@@ -17,21 +17,31 @@ export default {
   },
   mounted () {
     var that = this
-    this.axios({
-      method: 'get',
-      url: '/cloudmusic',
-      params: {
-        id: '436514312'
-      }
-    })
-    .then(function (res) {
-      // that.movieData = res.data.subjects
-      console.log(res.data.data[0])
-      that.songUrl = res.data.data[0].url
-    })
-    .catch(function (response) {
-      console.log(response)
-    })
+    var getMusic = function () {
+      return new Promise(function (resolve, reject) {
+        that.axios({
+          method: 'get',
+          url: '/cloudmusic',
+          params: {
+            id: '436514312'
+          }
+        })
+        .then(function (res) {
+          // that.movieData = res.data.subjects
+          console.log(res.data.data[0])
+          that.songUrl = res.data.data[0].url
+          resolve()
+        })
+        .catch(function (response) {
+          console.log(response)
+        })
+      })
+    }
+    getMusic()
+      .then(function () {
+        var x = document.getElementById('audio')
+        console.log(x.currentTime)
+      })
   }
 }
 </script>
