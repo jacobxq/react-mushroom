@@ -179,7 +179,7 @@ export default {
       box-shadow: 1px 1px 10px #ccc;
       margin: 7px 0;
       border-radius: 5px;
-      // background-color: #f0f0f0;
+      background-color: #fff;
       
       a {
         display: flex;

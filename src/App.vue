@@ -74,7 +74,7 @@ a {
   text-decoration: none;
 }
 body {
-  // background: #eee;
+  background: #f2f2f2;
 }
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
