@@ -14,6 +14,7 @@ import reducers from './reducer'
 import Login from './container/login/login'
 import Register from './container/register/register'
 
+import './index.css'
 import './config'
 
 const reduxDevtools = window.devToolsExtension ? window.devToolsExtension() : () => {}
