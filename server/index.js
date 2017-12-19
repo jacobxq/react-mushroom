@@ -6,6 +6,7 @@ const userRouter = require('./user')
 
 const app = express()
 
+app.disable('etag');
 app.use(bodyParser.json())
 app.use(cookieParser())
 app.use('/user', userRouter)

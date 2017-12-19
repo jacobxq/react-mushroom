@@ -6,11 +6,11 @@ import { Provider } from 'react-redux'
 import { 
 	BrowserRouter, 
 	Route, 
-	Redirect,
-	Switch
+	Redirect
 } from 'react-router-dom'
 import reducers from './reducer'
 
+import AuthRoute from './component/authroute/authroute'
 import Login from './container/login/login'
 import Register from './container/register/register'
 
@@ -29,10 +29,11 @@ ReactDOM.render(
 	(
 		<Provider store={store}>
 			<BrowserRouter>
-			<Switch>
+			<div>
+				<AuthRoute></AuthRoute>
 				<Route path="/login" component={Login}></Route>
 				<Route path="/register" component={Register}></Route>
-			</Switch>
+			</div>
 			</BrowserRouter>
 		</Provider>
 	),
