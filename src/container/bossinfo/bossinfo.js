@@ -42,10 +42,10 @@ class BossInfo extends React.Component {
 					}}
 				></AvatorSelector>
 					<InputItem onChange={v => this.handleChange('title', v)}>招聘职位</InputItem>
-					<InputItem onChange={v => this.handleChange('desc', v)}>公司名称</InputItem>
+					<InputItem onChange={v => this.handleChange('company', v)}>公司名称</InputItem>
 					<InputItem onChange={v => this.handleChange('money', v)}>职位薪资</InputItem>
 					<TextareaItem 
-						onChange={v => this.handleChange('company', v)}
+						onChange={v => this.handleChange('desc', v)}
 						rows={3}
 						autoHeight
 						title="职位要求"

@@ -9,9 +9,9 @@ const Router = express.Router()
 
 Router.get('/list', (req, res) => {
 	// User.remove({},function(e,d){})
-	User.find({}, (err, doc) => {
-		console.log(doc)
-		return res.json(doc)
+	const { type } = req.query
+	User.find({type}, (err, doc) => {
+		return res.json({code: 0, data: doc})
 	})
 })
 
@@ -34,7 +34,6 @@ Router.get('/info', (req, res) => {
 Router.post('/update', (req, res) => {
 	const {userid} = req.cookies
 	const body = req.body
-	console.log(body)
 	
 	if (!userid) {
 		return res.json({code: 1})

@@ -31,7 +31,7 @@ class GenusiInfo extends React.Component {
 		return (
 			<div>
 				{redirect&&redirect!==path? <Redirect to={this.props.redirectTo}></Redirect> :null}
-				<NavBar mode="dark">BOSS完善信息页</NavBar>
+				<NavBar mode="dark">牛人完善信息页</NavBar>
 				<AvatorSelector
 					selectAvator={(imagename) => {
 						this.setState({
