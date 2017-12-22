@@ -5,13 +5,11 @@ import { Switch, Route } from 'react-router-dom'
 
 import Boss from '../boss/boss'
 import Genius from '../genius/genius'
+import User from '../user/user'
 import NavLinkBar from '../navlink/navlink'
 
 function Msg() {
 	return <div>消息列表</div>
-}
-function Me() {
-	return <div>个人中心</div>
 }
 @connect(
 	state =>state
@@ -50,7 +48,7 @@ class DashBoard extends React.Component {
 				text: '我',
 				icon: 'user',
 				title: '个人中心',
-				component: Me
+				component: User
 			}
 		]
 
