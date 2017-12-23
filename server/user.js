@@ -3,6 +3,7 @@ const utils = require('utility')
 
 const model = require('./model')
 const User = model.getModel('user')
+const Chat = model.getModel('chat')
 const _filter = {'pwd': 0, '__v': 0}
 
 const Router = express.Router()
@@ -29,6 +30,25 @@ Router.get('/info', (req, res) => {
 		}
 		return res.json({code: 1, msg: '还没登陆'})
 	})
+})
+
+Router.get('/getmsglist', (req, res) => {
+	const user = req.cookies.userid
+
+	User.find({}, (err, userdoc) => {
+		let users= {}
+		userdoc.forEach(v=> {
+			users[v._id] = {name: v.user, avator: v.avator}
+		})
+
+		// {'$or': [{from: user, to: user}]}
+		Chat.find({'$or':[{from: user}, {to: user}]}, (err, doc) => {
+			if(!err) {
+				return res.json({code: 0, msgs: doc, users: users})
+			}
+		})
+	})
+	
 })
 
 Router.post('/update', (req, res) => {
