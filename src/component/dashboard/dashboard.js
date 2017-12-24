@@ -7,11 +7,9 @@ import {getMsgList, recvMsg} from '../../redux/chat.redux'
 import Boss from '../boss/boss'
 import Genius from '../genius/genius'
 import User from '../user/user'
+import Msg from '../msg/msg'
 import NavLinkBar from '../navlink/navlink'
 
-function Msg() {
-	return <div>消息列表</div>
-}
 @connect(
 	state =>state,
 	{getMsgList, recvMsg}
@@ -21,7 +19,7 @@ class DashBoard extends React.Component {
 	componentDidMount() {
 		if(!this.props.chat.chatmsg.length) {
 			this.props.getMsgList()
-			this.props.recvMsg();
+			this.props.recvMsg()
 		}
 	}
 

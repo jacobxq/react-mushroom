@@ -9,17 +9,16 @@ class UserCard extends React.Component {
 	}
 
 	handleClick(v) {
-		console.log(v);
 		this.props.history.push(`/chat/${v._id}`)
 	}
 	render() {
 		return (
 			<WingBlank>
 			    <WhiteSpace />
-			    {this.props.userlist.map(v => (
+			    {this.props.userlist.map((v, index) => (
 			    	v.avator && v.desc ? 
 			    	<Card 
-				    	key={v} 
+				    	key={index} 
 				    	onClick={() => { this.handleClick(v) }}
 			    	>
 				      <Card.Header
