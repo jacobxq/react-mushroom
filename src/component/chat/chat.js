@@ -76,7 +76,6 @@ class Chat extends React.Component {
 					{users[userid].name }
 				</NavBar>
 				<div style={{height: 44}}></div>
-				
 				{chatmsgs.map(v=> {
 					const avator = require(`../img/${users[v.from].avator}.png`)
 					return v.from === userid ? (
