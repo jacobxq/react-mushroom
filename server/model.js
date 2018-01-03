@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 // 链接mongoose并且使用mushroom这个集合
-const DB_URL = 'mongodb://127.0.0.1:27017/mushroom'
+const DB_URL = 'mongodb://127.0.0.1:27018/mushroom'
 
 mongoose.connect(DB_URL)
 
