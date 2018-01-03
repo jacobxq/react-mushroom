@@ -38,6 +38,6 @@ app.use((req, res, next) => {
 })
 app.use('/', express.static(path.resolve('build')))
 
-server.listen(8900, () => {
-	console.log('node app start at port 8900')
+server.listen(8098, () => {
+	console.log('node app start at port 8098')
 })
